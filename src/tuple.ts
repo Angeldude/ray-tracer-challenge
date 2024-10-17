@@ -29,6 +29,10 @@ export class Tuple implements valid_point, valid_vector {
     }
     
     isVector(){
-        return !this.isPoint()
+        return Tuple.equal(this.w, 0)
+    }
+
+    add(snd: Tuple): Tuple{
+        return new Tuple(this.x + snd.x, this.y + snd.y, this.z + snd.z, this.w + snd.w);
     }
 }
