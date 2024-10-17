@@ -6,7 +6,7 @@ export class Vector extends Tuple{
         super(x,y,z,0.0)
     }
 
-    dd(snd:Tuple): Tuple{
+    add(snd:Tuple): Tuple{
         let a = super.add(snd)
         if(Vector.equal(a.w,0))
            return new Vector(a.x,a.y,a.z)
